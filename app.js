@@ -60,7 +60,12 @@ document.addEventListener('DOMContentLoaded', function () {
   const calculateBtn = document.getElementById('calculateBtn');
   const resultElement = document.getElementById('result');
 
-  calculateBtn.addEventListener('click', calculateDateDifference);
+  dateForm1.date1.addEventListener('input', calculateDateDifference);
+  dateForm2.date2.addEventListener('input', calculateDateDifference);
+
+  dateForm1.time1.addEventListener('input', calculateDateDifference);
+  dateForm2.time2.addEventListener('input', calculateDateDifference);
+
 
   const bgColorPicker = document.getElementById('bgColorPicker');
   bgColorPicker.addEventListener('input', () => changeBackgroundColor(bgColorPicker));
