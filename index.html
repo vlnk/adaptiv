@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Date Difference Calculator</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <div id="app">
+      <fieldset>
+        <legend>Date Difference:</legend>
+
+        <form id="dateForm1">
+          <label for="date1">Enter Date 1:</label>
+          <input type="date" id="date1" required>
+        </form>
+
+        <form id="dateForm2">
+          <label for="date2">Enter Date 2:</label>
+          <input type="date" id="date2" required>
+        </form>
+
+        <button id="calculateBtn">
+          Calculate</br>
+          Difference
+        </button>
+      </fieldset>
+
+        <div id="differenceResult"></div>
+
+      <fieldset>
+        <legend>Color Pickers:</legend>
+
+        <form id="colorFormBg">
+          <label for="colorPicker">Choose Background Color:</label>
+          <input type="color" id="bgColorPicker">
+        </form>
+
+        <form id="colorFormFg">
+          <label for="colorPicker">Choose Text Color:</label>
+          <input type="color" id="fgColorPicker">
+        </form>
+      </fieldset>
+
+      <div id="inputChanges">
+        <h2>Input Changes</h2>
+        <ul id="changesList"></ul>
+      </div>
+    </div>
+
+    <script src="app.js"></script>
+  </body>
+</html>
