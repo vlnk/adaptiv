@@ -1,6 +1,11 @@
 function calculateDateDifference() {
-  const date1 = new Date(dateForm1.date1.value);
-  const date2 = new Date(dateForm2.date2.value);
+  const dateForm1 = document.getElementById('dateForm1');
+  const dateForm2 = document.getElementById('dateForm2');
+
+  const date1 = new Date(`${dateForm1.date1.value}T${dateForm1.time1.value}`);
+  const date2 = new Date(`${dateForm2.date2.value}T${dateForm2.time2.value}`);
+
+  console.log(date1)
 
   const resultElement = document.getElementById('differenceResult');
 
@@ -66,6 +71,9 @@ document.addEventListener('DOMContentLoaded', function () {
   // Track changes in date inputs
   dateForm1.date1.addEventListener('input', trackInputChange);
   dateForm2.date2.addEventListener('input', trackInputChange);
+
+  dateForm1.time1.addEventListener('input', trackInputChange);
+  dateForm2.time2.addEventListener('input', trackInputChange);
 
   // Track changes in color pickers
   bgColorPicker.addEventListener('input', trackInputChange);
